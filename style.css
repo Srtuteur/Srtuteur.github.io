@@ -1,0 +1,665 @@
+
+body{
+    background: blue;
+}
+
+
+
+.mainNavbar{
+    z-index: 9;
+    margin-top: 5%;
+    animation: fade 4s forwards;
+}
+
+
+.navbar-brand{
+    padding-right: 2%;
+    margin-left: 10%;
+}
+
+
+
+.navbar-brand img{
+    height: 150px;
+}
+
+.mainNavbar a{
+    color:white;
+    font-size: 25px;
+}
+
+.navbar-nav > li{
+  padding-left:20px;
+  padding-right:20px;
+  border-right: 1px solid white;
+}
+
+.navbar-nav{
+    width: 100%;
+}
+
+.navbar-nav li{
+    width:20% ;
+    text-align: center;
+}
+
+.navbar-nav li:nth-child(3){
+    width: 40%;
+    border-right: 0;
+}
+
+.navbar-nav li:nth-child(1){
+    height: 50px;
+}
+
+.navbar-nav li:nth-child(2){
+    height: 50px;
+}
+
+.navbar-nav li:nth-child(4){
+    height: 50px;
+    border-left: 1px solid white;
+}
+
+.navbar-nav li:nth-child(5){
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+/** carousel**/
+
+.carousel-title{
+    font-size: 7vw;
+}
+
+#Home-Carousel{
+  width:100%;
+  top: 0;
+  position: absolute;
+}
+
+.carousel-item img{
+    height: 800px;
+}
+.carousel-caption{
+    margin-bottom: 15%;
+    color: white;
+    font-family:Palatino ;
+}
+
+
+.carousel-item{
+    z-index: -2;
+}
+
+
+.title{
+    color: white;
+    font-size: 8vw;
+    margin-left: 15%;
+    top: 40%;
+    font-family:Palatino ;
+    z-index: -1;
+    position: absolute;
+    text-align: center;
+}
+
+.header_description {
+    display: none;
+    font-size: 50px;
+    animation: 4s fade forwards;
+    color: goldenrod;
+}
+
+
+
+@keyframes titleAnimate {
+    0%{
+        font-size: 1px;
+    }
+
+    50% {
+        font-size: 100px;
+    }
+    100% {
+        font-size: 50px;
+    }
+}
+
+.Description{
+    color: white;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /**backdrop-filter: blur(1.5px);**/
+    -webkit-backdrop-filter: blur(6.5px);
+    /**border-right: 2px solid goldenrod;
+    border-left: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;**/
+    padding-left: 10%;
+    padding-right: 10%;
+    z-index: -9;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 45%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@keyframes get_bigger {
+    0%{
+        font-size: 0px;
+    }
+    100%{
+        font-size: 25px;
+    }
+
+}
+
+.get_bigger{
+    animation: get_bigger 2s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes MainTitle  {
+    0%{
+        color: black;
+    }
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        color: goldenrod;
+        opacity: 1;
+    }
+
+}
+
+.MainTitle{
+    animation: MainTitle 2s forwards;
+    position: absolute;
+    top:110%;
+}
+
+
+
+
+
+.Latest_Merch{
+    margin-top: 10%;
+}
+
+.Latest_Merch_title{
+    font-size: 4vw;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    color: white;
+    margin-left: 2%;
+    border-right: .15em solid rgb(255, 255, 255);
+    /*animation:
+    typing 3.5s steps(40,end),
+    blink-caret .75s step-end infinite;*/
+    /*background-color: blue;*/
+    width: max-content;
+}
+
+.typing{
+    animation:
+    typing 3.5s steps(50,end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 40% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255); }
+}
+
+.Latest_Merch_list{
+    list-style-type: none;
+    margin-top: 5%;
+    display: flex;
+    padding-right: 5%;
+    margin-left: 2%;
+}
+
+.Latest_Merch_container{
+    text-align: center;
+    width: 30%;
+    margin-left: 5%;
+    color: white;
+    padding-top: 1%;
+    background: rgba( 248, 248, 248, 0.05 );
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transform: translateX(-400%);
+}
+
+.Latest_Merch_container_animate{
+    animation: Latest_Merch_from_left 4s forwards;
+}
+
+.Latest_Merch_list li:nth-child(1){
+    animation-delay: 4s;
+}
+.Latest_Merch_list li:nth-child(2){
+    animation-delay: 2s;
+}
+
+@keyframes Latest_Merch_from_left {
+    0%{
+        transform: translateX(-400%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+
+}
+
+.Latest_Merch_container img{
+    height: 250px;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    mix-blend-mode: multiply;
+    padding-bottom: 2%;
+}
+
+.See_more_container{
+    margin-top: 5%;
+    padding-bottom: 5%;/*to remove*/
+}
+
+
+.See_more{
+    margin-left: 35%;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border: solid 2px grey;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+    padding-left: 2%;
+    border-radius: 30px;
+}
+
+
+.See_more:hover{
+    background:none;
+    color: black;
+}
+
+.Latest_Merch_name{
+    padding-bottom: 5%;
+    font-size: 24px;
+    color: white;
+}
+
+.Buy_now_container{
+    margin-top: 2%;
+    padding-bottom: 5%;
+}
+
+
+.Buy_now{
+    text-decoration: none;
+    background-color: white;
+    color: goldenrod;
+    border: solid 2px goldenrod;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+    padding-left: 2%;
+    border-radius: 30px;
+}
+
+
+.Buy_now:hover{
+    background-color: goldenrod;
+    color: black;
+}
+
+.education_link{
+    text-decoration: none;
+    color: white;
+}
+
+
+.education_link:hover{
+    color: deepskyblue;
+}
+
+
+.Latest_Merch_container:hover{
+    box-shadow: black  0px 0px 22px 4px;
+}
+
+
+
+
+/**courses**/
+
+.course_background{
+    background-image: url("cours.jpg");
+    height: 600px;
+    background-size:100% 100%;
+}
+
+
+.Seance_deroulement{
+    color: white;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /**backdrop-filter: blur(1.5px);**/
+    -webkit-backdrop-filter: blur(6.5px);
+    /**border-right: 2px solid goldenrod;
+    border-left: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;**/
+    padding-left: 10%;
+    padding-right: 10%;
+    z-index: -9;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 2%;
+}
+
+.course_base_list{
+    list-style-type: none;
+    display: flex;
+    padding-right: 5%;
+    margin-left: 2%;
+    margin-top: 5%;
+}
+
+.course_base_container{
+    text-align: center;
+    width: 30%;
+    margin-left: 5%;
+    color: white;
+    padding-top: 1%;
+    background: rgba( 248, 248, 248, 0.05 );
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    /*transform: translateX(-400%);*/
+    /*padding-left: 2%;*/
+}
+
+.course_base_name{
+    /*text-align: center;
+    margin-right: 2%;*/
+}
+
+.course_base_description{
+}
+
+.programming_course{
+    color: white;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /**backdrop-filter: blur(1.5px);**/
+    -webkit-backdrop-filter: blur(6.5px);
+    /**border-right: 2px solid goldenrod;
+    border-left: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;**/
+    padding-left: 10%;
+    padding-right: 10%;
+    z-index: -9;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 2%;
+}
+
+.header_programming{
+    text-align: center;
+}
+
+.programming_text{
+    text-align: center;
+}
+
+.programming_languages{
+}
+
+.programming_notions{
+}
+
+
+
+
+
+
+#course_title{
+    /*font-size: 60px;*/
+    font-size: 5vw;
+    color: white;
+    text-align: center;
+    margin-top: 7.5%;
+    animation: linear 4s Contact_title_animate;
+}
+
+/**Contact**/
+
+.contact_background{
+    background-color: blue;
+}
+
+.contact_info{
+    padding-left: 10%;
+    padding-top: 2%;
+    background-color: white;
+
+}
+
+.contact_info h1{
+    font-size: 35px;
+}
+
+#infos_left{
+    float: left;
+}
+
+
+.Email_Form{
+}
+
+#General_info{
+    margin-top: 5%;
+
+}
+
+#General_info th{
+    font-size: 20px;
+}
+#schedule{
+    border-collapse: separate;
+}
+
+#schedule caption{
+    font-size: 30px;
+    caption-side: top;
+    color: black;
+}
+
+
+#infos_right{
+    margin-left: 5%;
+    animation: forwards 3s fade;
+}
+
+#google_map{
+}
+
+.Email_Form label input{
+    width: 450px;
+}
+
+#contact_button{
+    background-color: deepskyblue;
+    color: white;
+    border: none;
+    padding: 5px;
+    width: 200px;
+}
+
+#contact_button:hover{
+    background-color: skyblue;
+    color: black;
+    border:solid 1px blue
+}
+
+#l1{
+    animation: 1s linear comeFromLeft;
+}
+
+#l2{
+    animation: 1.5s linear comeFromLeft;
+}
+
+#l3{
+    animation: 2s linear comeFromLeft;
+}
+
+#l4{
+    animation: 2.5s linear comeFromLeft;
+}
+
+#l5{
+    animation: 3s linear comeFromLeft;
+}
+
+
+
+
+/**Reserver**/
+
+#schedule_title{
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    margin-top: 10%;
+}
+/*#Member_list li:first-child img:hover {
+  box-shadow: blue 0px 0px 22px 4px;
+}
+
+#Member_list li:nth-child(2) img:hover {
+    box-shadow: goldenrod 0px 0px 22px 4px;
+}
+
+#Member_list li:nth-child(3) img:hover {
+  box-shadow: red 0px 0px 22px 4px;
+}*/
+
+/*Me joindre*/
+
+#joindre_title{
+    font-size: 60px;
+    color: white;
+}
+
+
+/**Animation**/
+
+@keyframes comeFromLeft {
+      0% {
+      transform: translate(-100%);   }
+      100% {
+        transform: translate(0);   }
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+.fade{
+    animation: fade forwards 4s;
+}
+
+@keyframes Contact_title_animate {
+    0%{
+        font-size: 30vw;
+    }
+    100%{
+        font-size: 4vw;
+    }
+
+}
+
+.reservation_help{
+    margin-top: 5%;
+    color: white;
+    margin-left: 2%;
+}
+
+.help_list li{
+    padding-bottom: 1%;
+}
+
+.reservation_help h1{
+    font-size: 4vw;
+    padding-bottom: 2%;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+
+    .Latest_Merch{
+    }
+    .Description{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .carousel-item img{
+        height: 600px;
+    }
+    .navbar-brand img{
+        height: 100px;
+    }
+    .mainNavbar a{
+        font-size: 20px;
+    }
+
+    .Description{
+        margin-top: 50%;
+    }
+
+    .course_background{
+        height: 500px;
+    }
+    #course_title{
+        margin-top: 15%;
+    }
+
+}
